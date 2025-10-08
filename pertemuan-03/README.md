@@ -10,4 +10,5 @@ Hari ini, Rabu 08 Oktober 2025, saya belajar:
 <li>membuat styling untuk selector ID #about<li>
 <li>membuat styling untuk selector ID #about elemen h2<li>
 <li>membuat styling untuk selector ID #abour elemen p<li>
+<li>membuat styling untuk selector ID #abour elemen strong<li>
 <ol>
