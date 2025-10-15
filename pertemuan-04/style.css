@@ -43,8 +43,8 @@ margin: 8px 0 0;
 header li a {
 display: block;
 padding: 12px 14px;
-border: 1px solid rgba(255, 255, 255, .35);
-background: rgba(255, 255, 255, .08);
+border: 1px solid rgba(44, 95, 116, 0.35);
+background: rgba(18, 127, 196, 0.08);
 backdrop-filter: saturate(120%);
 }
 
@@ -190,5 +190,12 @@ z-index: 1000;
     padding-right: 0;
     margin-bottom: 2px;
   }
+
+
+  #contact input,
+#contact textarea,
+#contact button {
+width: 100%;
+}
 
 }
