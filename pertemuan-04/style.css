@@ -49,6 +49,13 @@ margin-bottom: 16px;
 text-align: justify;
 }
 
+footer {
+background: #222;
+color: #aaa;
+text-align: center;
+padding: 10px;
+}
+
 #about {
   background-color: #ffffff;
   border-radius: 10px;
