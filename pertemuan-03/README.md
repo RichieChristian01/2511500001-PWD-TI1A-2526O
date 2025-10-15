@@ -13,7 +13,6 @@ Hari ini, Rabu 08 Oktober 2025, saya belajar:
 <li>membuat styling untuk selector ID #about elemen strong</li>
 <li>membuat styling untuk selector ID #about mode responsif (mobile)</li>
 <li>membuat styling untuk selector ID section#about</li>
-<li>membuat styling untuk selector ID section#about group selector</li>
 <li>membuat styling untuk selector ID section#about group selector h2</li>
 <li>membuat styling untuk selector ID section#about upgrade struktur form</li>
 <li>membuat styling untuk selector ID section#about styling input dan textarea</li>
