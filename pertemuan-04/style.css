@@ -153,6 +153,7 @@ form {
 }
 
 input, textarea {
+  width: 95%;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -190,12 +191,5 @@ z-index: 1000;
     padding-right: 0;
     margin-bottom: 2px;
   }
-
-
-  #contact input,
-#contact textarea,
-#contact button {
-width: 100%;
-}
 
 }
