@@ -186,6 +186,13 @@ top: 0;
 z-index: 1000;
 }
 
+.menu-toggle {
+display: block;
+position: absolute;
+left: 16px;
+top: 8px;
+}
+
 #about strong {
     text-align: left;
     padding-right: 0;
