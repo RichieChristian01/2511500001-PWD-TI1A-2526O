@@ -173,6 +173,15 @@ button:hover {
   background-color: #89a2bc;
 }
 
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
 @media (max-width: 600px) {
 #about p {
     flex-direction: column;
@@ -204,7 +213,7 @@ nav {
 nav.active {
   display: flex;
 }
-}
+
 
 #about strong {
     text-align: left;
@@ -212,13 +221,5 @@ nav.active {
     margin-bottom: 2px;
   }
 
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 20px;
-  cursor: pointer;
-}
 
 }
