@@ -192,4 +192,13 @@ z-index: 1000;
     margin-bottom: 2px;
   }
 
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
 }
