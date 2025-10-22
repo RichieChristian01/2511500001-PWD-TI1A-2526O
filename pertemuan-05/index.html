@@ -10,6 +10,9 @@
 <body>
   <header>
     <h1>Ini Header</h1>
+    <button class="menu-toggle" id="menu-Toggle" aria-label="Toggle Navigation">
+        &#9776;
+    </button>
     <nav>
       <ul>
         <li><a href="#Home">Beranda</a></li>
@@ -20,7 +23,7 @@
   </header>
 
   <main>
-    <section id="Home">
+    <section id="home">
       <h2>Selamat Datang</h2>
       <p>Ini contoh paragraf HTML.</p>
     </section>
@@ -37,24 +40,21 @@
       <p><strong>Nama Orang Tua:</strong> Bapak Yanto dan Ibu Aice</p>
     </section>
 
-    <section id="Contact">
-      <h2>Kontak Kami</h2>
-      <form action="" method="GET">
-        <label for="txtNama"><span>Nama:</span>
-        <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required autocomplete="name" />
-        </label>
-
-        <label for="txtEmail"><span>Email:</span>
-        <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required autocomplete="email" />
-        </label>
-
-        <label for="txtPesan"><span>Pesan:</span>
-        <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
-        </label>
-
-        <button type="submit">Kirim</button>
-        <button type="reset">Batal</button>
-      </form>
+    <section id="contact">
+        <h2>Kontak kami</h2>
+        <form action="" method="get">
+             <label for="txtNama"><span>Nama:</span>         
+             <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required autocomplete="name">  
+                </label>
+             <label for="txtEmail"><span>Email:</span>         
+             <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required autocomplete="email">  
+                </label>
+             <label for="txtPesan"><span>Pesan:</span>         
+             <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>          
+             </label>
+             <button type="submit">Kirim</button>         
+             <button type="reset">Batal</button> 
+        </form>
     </section>
   </main>
 
