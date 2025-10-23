@@ -131,7 +131,7 @@ transform: translateY(1px);
   flex-shrink: 0;
 }
 
-#Contact {
+#contact {
   background-color: #ffffff;
   border-radius: 10px;
   padding: 20px;
@@ -140,7 +140,7 @@ transform: translateY(1px);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-#Contact h2 {
+#contact h2 {
   color: #003366;
   border-bottom: 2px solid #003366;
   padding-bottom: 6px;
