@@ -166,6 +166,19 @@ button:hover {
   top: 8px;
 }
 
+nav {
+    display: none;
+    flex-direction: column;
+    background: #003366;
+    width: 100%;
+    padding: 5px 0; 
+
+}
+
+nav.active {
+    display: flex;
+}
+
   header {
 padding: 16px;
 position: sticky;
