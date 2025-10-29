@@ -1,6 +1,10 @@
-# pertemuan-06
+# pertemuan-05
+
+NIM : 2511500001<br>
+Nama : Richie Christian<br>
 
 Hari ini, Rabu 29 Oktober 2025 saya mempelajari:
-NIM : 2511500001
-
-Belajar :
+<ol>
+<li>“hello.php”</li>
+<li>"index.php</li>
+</ol>
