@@ -1,63 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Belajar PHP Dasar</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+  
 <body>
-<h1><?php echo "Halo, Dunia PHP!"; ?></h1>
-<?php
-$nama = "Richie Christian";
-$umur = 18;
-$tinggi = 1.65;
-$aktif = true;
-$hobi = ["Coding", "Memasak", "Musik"];
-$mahasiswa = (object)[
-"nim" => "2511500001",
-"nama" => "Richie Christian",
-"prodi" => "Teknik Informatika"
-];
-$nilai_akhir = NULL;
-echo "<h2>Demo Tipe Data PHP</h2>";
-echo "<pre>";
-echo "String:\n";
-var_dump($nama);
-echo "\nInteger:\n";
-var_dump($umur);
-echo "\nFloat:\n";
-var_dump($tinggi);
-echo "\nBoolean:\n";
-var_dump($aktif);
-echo "\nArray:\n";
-var_dump($hobi);
-echo "\nObject:\n";
-var_dump($mahasiswa);
-echo "\nNULL:\n";
-var_dump($nilai_akhir);
-echo "</pre>";
-define("KAMPUS", "ISB Atma Luhur");
-const ANGKATAN = 2025;
-echo "Kampus: " . KAMPUS . "<br>";
-echo "Angkatan: " . ANGKATAN;
+  <header>
+    <h1>Ini Header</h1>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+        &#9776;
+    </button>
+    <nav>
+      <ul>
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
 
-$a = 100;
-$b = "100";
-$c = 0;
-$d = false;
-echo "<h3>Perbandingan == dan ===</h3>";
-echo "\$a == \$b : "; var_dump($a == $b);
-echo "\$a === \$b : "; var_dump($a === $b);
-echo "\$c == \$d : "; var_dump($c == $d);
-echo "\$c === \$d : "; var_dump($c === $d);
+  <main>
+    <section id="home">
+      <h2>Selamat Datang</h2>
+      <?php
+      echo "Halo, Dunia! <br>" , "Nama saya Richie";
+      ?>
+      <p>Ini contoh paragraf HTML.</p>
+    </section>
 
-$nilai = 80;
-if ($nilai >= 90) {
-echo "A";
-} elseif ($nilai >= 80) 
-echo "B";
+    <section id="about">
+        <?php
+          $nim = "2511500001";
+          $NIM = "2511500002";
+          $nama = "Richie Christian";
+          $NAMA = "Tian";
+        ?>
 
- else {
-echo "C";
-}
-?>
+      <h2>Tentang Saya</h2>
+      <p><strong>NIM:</strong> 
+      <?php
+        echo $nim;
+      ?>
+      </p>
+      <p><strong>Nama Lengkap:</strong> 
+      <?php
+        echo $nim;
+      ?>
+      &#128526;</p>
+      <p><strong>Tempat Lahir:</strong> Pangkalpinang</p>
+      <p><strong>Tanggal Lahir:</strong> 28 September 2007</p>
+      <p><strong>Hobi:</strong> Bulu tangkis &#127992;</p>
+      <p><strong>Pasangan:</strong> Belum ada &hearts;</p>
+      <p><strong>Pekerjaan:</strong> Mahasiswa</p>
+      <p><strong>Nama Orang Tua:</strong> Bapak Yanto dan Ibu Aice</p>
+    </section>
+
+    <section id="contact">
+        <h2>Kontak kami</h2>
+        <form action="" method="get">
+             <label for="txtNama"><span>Nama:</span>         
+             <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required autocomplete="name">  
+                </label>
+             <label for="txtEmail"><span>Email:</span>         
+             <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required autocomplete="email">  
+                </label>
+             <label for="txtPesan"><span>Pesan Anda:</span>
+              <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
+              <small id="charCount">0/200 karakter</small>
+            </label>
+            
+             <button type="submit">Kirim</button>         
+             <button type="reset">Batal</button> 
+        </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Richie Christian [2511500001]</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
+
