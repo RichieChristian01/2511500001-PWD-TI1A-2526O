@@ -28,7 +28,8 @@ document.querySelector("form").addEventListener("submit", function (e) {
  if (nama.value.trim().length < 3) {
 showError(nama, "Nama minimal 3 huruf dan tidak boleh kosong.");
 isValid = false;
-} else if (!/^[A-Za-z\s]+$/.test(nama.value)) {
+} 
+else if (!/^[A-Za-z\s]+$/.test(nama.value)) {
 showError(nama, "Nama hanya boleh berisi huruf dan spasi.");
 isValid = false;
 }
@@ -36,7 +37,8 @@ isValid = false;
 if (email.value.trim() === "") {
 showError(email, "Email wajib diisi.");
 isValid = false;
-} else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+} 
+else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
     showError(email, "Format email tidak valid. Contoh: nama@mail.com");
 isValid = false;
 }

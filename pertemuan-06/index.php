@@ -25,81 +25,19 @@
   <main>
     <section id="home">
       <h2>Selamat Datang</h2>
-      <?php
-      echo "Halo! <br>" , "Nama saya Richie Christian";
-      ?>
       <p>Ini contoh paragraf HTML.</p>
     </section>
 
     <section id="about">
-        <?php
-          $NIM = "2511500001";
-          $Nama = "Richie Christian";
-          $TempatLahir = "Pangkalpinang";
-          $TanggalLahir = "28 September 2007";
-          $Hobi = "Bulu Tangkis &#127992;, Gym &#128170;";
-          $Pasangan = "Belum ada";
-          $Pekerjaan = "Mahasiswa";
-          $NamaOrangTua = "Bapak Yanto &amp; Ibu Aice";
-          $NamaKakak = "-";
-          $NamaAdik = "-";
-        ?>
-
       <h2>Tentang Saya</h2>
-      <p><strong>NIM:</strong> 
-        <?php
-            echo $NIM;
-        ?>
-      </p>
-      <p><strong>Nama Lengkap:</strong> 
-        <?php
-            echo $Nama;
-        ?>
-      &#128526;</p>
-      <p><strong>Tempat Lahir:</strong> 
-        <?php
-            echo $TempatLahir;
-        ?>
-      </p>
-      <p><strong>Tanggal Lahir:</strong> 
-        <?php
-            echo $TanggalLahir;
-        ?>
-      </p>
-      <p><strong>Hobi:</strong> 
-        <?php
-            echo $Hobi;
-        ?>
-      
-      </p>
-      <p><strong>Pasangan:</strong> 
-        <?php
-            echo $Pasangan;
-        ?>
-      &hearts;
-      </p>
-      <p><strong>Pekerjaan:</strong>
-      <?php
-          echo $Pekerjaan;
-      ?> 
-      </p>
-      <p><strong>Nama Orang Tua:</strong> 
-      <?php
-          echo $NamaOrangTua;
-      ?>
-      </p>
-      </p>
-      <p><strong>Nama Kakak:</strong> 
-      <?php
-          echo $NamaKakak;
-      ?>
-      </p>
-      </p>
-      <p><strong>Nama Adik:</strong> 
-      <?php
-          echo $NamaAdik;
-      ?>
-    </p>
+      <p><strong>NIM:</strong> 2511500001</p>
+      <p><strong>Nama Lengkap:</strong> Richie Christian &#128526;</p>
+      <p><strong>Tempat Lahir:</strong> Pangkalpinang</p>
+      <p><strong>Tanggal Lahir:</strong> 28 September 2007</p>
+      <p><strong>Hobi:</strong> Bulu tangkis &#127992;</p>
+      <p><strong>Pasangan:</strong> Belum ada &hearts;</p>
+      <p><strong>Pekerjaan:</strong> Mahasiswa</p>
+      <p><strong>Nama Orang Tua:</strong> Bapak Yanto dan Ibu Aice</p>
     </section>
 
     <section id="contact">
@@ -112,8 +50,10 @@
              <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required autocomplete="email">  
                 </label>
              <label for="txtPesan"><span>Pesan Anda:</span>
+              <div class="input-wrapper">
               <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
               <small id="charCount">0/200 karakter</small>
+              </div>
             </label>
             
              <button type="submit">Kirim</button>         
