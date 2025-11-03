@@ -110,28 +110,28 @@
         $sksMatkul4 = "3";
         $sksMatkul5 = "3";
 
-        $nilaiHadir1 = "100";
-        $nilaiHadir2 = "100";
-        $nilaiHadir3 = "100";
-        $nilaiHadir4 = "100";
+        $nilaiHadir1 = "80";
+        $nilaiHadir2 = "65";
+        $nilaiHadir3 = "90";
+        $nilaiHadir4 = "95";
         $nilaiHadir5 = "100";
 
-        $nilaiTugas1 = "65";
+        $nilaiTugas1 = "68";
         $nilaiTugas2 = "75";
-        $nilaiTugas3 = "80";
+        $nilaiTugas3 = "50";
         $nilaiTugas4 = "85";
         $nilaiTugas5 = "100";
 
-        $nilaiUTS1 = "80";
-        $nilaiUTS2 = "100";
-        $nilaiUTS3 = "87";
+        $nilaiUTS1 = "70";
+        $nilaiUTS2 = "83";
+        $nilaiUTS3 = "67";
         $nilaiUTS4 = "93";
         $nilaiUTS5 = "89";
 
         $nilaiUAS1 = "93";
-        $nilaiUAS2 = "84";
+        $nilaiUAS2 = "95";
         $nilaiUAS3 = "91";
-        $nilaiUAS4 = "94";
+        $nilaiUAS4 = "44";
         $nilaiUAS5 = "88";
 
         function hitungSemuaMatkul(array $nama, array $sks, array $hadir, array $tugas, array $uts, array $uas): void {
@@ -213,7 +213,6 @@
               $tugas = [$nilaiTugas1, $nilaiTugas2, $nilaiTugas3, $nilaiTugas4, $nilaiTugas5];
               $uts = [$nilaiUTS1, $nilaiUTS2, $nilaiUTS3, $nilaiUTS4, $nilaiUTS5];
               $uas = [$nilaiUAS1, $nilaiUAS2, $nilaiUAS3, $nilaiUAS4, $nilaiUAS5];
-
               hitungSemuaMatkul($nama, $sks, $hadir, $tugas, $uts, $uas);
       ?>
     </section>
