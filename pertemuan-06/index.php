@@ -113,7 +113,7 @@
         $nilaiHadir1 = "80";
         $nilaiHadir2 = "95";
         $nilaiHadir3 = "90";
-        $nilaiHadir4 = "95";
+        $nilaiHadir4 = "65";
         $nilaiHadir5 = "100";
 
         $nilaiTugas1 = "88";
@@ -125,7 +125,7 @@
         $nilaiUTS1 = "90";
         $nilaiUTS2 = "83";
         $nilaiUTS3 = "97";
-        $nilaiUTS4 = "93";
+        $nilaiUTS4 = "73";
         $nilaiUTS5 = "89";
 
         $nilaiUAS1 = "93";
