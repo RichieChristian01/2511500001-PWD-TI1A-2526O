@@ -16,33 +16,26 @@ homeSection.appendChild(ucapan);
 });
 
 document.querySelector("form").addEventListener("submit", function (e) {
- const nama = document.getElementById("txtNama");
- const email = document.getElementById("txtEmail");
- const pesan = document.getElementById("txtPesan");
-
- document.querySelectorAll(".error-msg").forEach(el => el.remove());
- [nama, email, pesan].forEach(el => el.style.border = "");
-
- let isValid = true;
-
- if (nama.value.trim().length < 3) {
+const nama = document.getElementById("txtNama");
+const email = document.getElementById("txtEmail");
+const pesan = document.getElementById("txtPesan");
+document.querySelectorAll(".error-msg").forEach(el => el.remove());
+[nama, email, pesan].forEach(el => el.style.border = "");
+let isValid = true;
+if (nama.value.trim().length < 3) {
 showError(nama, "Nama minimal 3 huruf dan tidak boleh kosong.");
 isValid = false;
-} 
-else if (!/^[A-Za-z\s]+$/.test(nama.value)) {
+} else if (!/^[A-Za-z\s]+$/.test(nama.value)) {
 showError(nama, "Nama hanya boleh berisi huruf dan spasi.");
 isValid = false;
 }
-
 if (email.value.trim() === "") {
 showError(email, "Email wajib diisi.");
 isValid = false;
-} 
-else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+} else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
     showError(email, "Format email tidak valid. Contoh: nama@mail.com");
 isValid = false;
 }
-
 if (pesan.value.trim().length < 10) {
 showError(pesan, "Pesan minimal 10 karakter agar lebih jelas.");
 isValid = false;
@@ -53,7 +46,6 @@ e.preventDefault();
 alert("Terima kasih, " + nama.value + "!\nPesan Anda telah dikirim.");
 }
 });
-
 function showError(inputElement, message) {
 const label = inputElement.closest("label");
 if (!label) return;
@@ -75,7 +67,6 @@ label.appendChild(small);
 inputElement.style.border = "1px solid red";
 alignErrorMessage(small, inputElement);
 }
-
 function alignErrorMessage(smallEl, inputEl) {
 const isMobile = window.matchMedia("(max-width: 600px)").matches;
 if (isMobile) {
@@ -91,13 +82,13 @@ const offsetLeft = Math.max(0, Math.round(rectInput.left - rectLabel.left));
 smallEl.style.marginLeft = offsetLeft + "px";
 smallEl.style.width = Math.round(rectInput.width) + "px";
 }
-
 window.addEventListener("resize", () => {
 document.querySelectorAll(".error-msg").forEach(small => {
 const target = document.getElementById(small.dataset.forId);
 if (target) alignErrorMessage(small, target);
 });
 });
+
 
 document.getElementById("txtPesan").addEventListener("input", function () {
 const panjang = this.value.length;
