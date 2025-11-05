@@ -11,4 +11,6 @@ Hari ini, Rabu 05 November 2025 saya mempelajari:
 <li>session di get_proses.php</li>
 <li>menampilkan section dari get_proses.php ke get.php</li>
 <li>redirect dari get_proses.php ke get.php</li>
+<li>copy get.php dan get_proses.php menjadi post.php dan post_proses.php</li>
+<li>menyesuaikan get ke post</li>
 </ol>
