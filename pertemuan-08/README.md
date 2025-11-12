@@ -12,4 +12,5 @@ Proses saya mengerjakan UTS ini sebagai berikut:<br>
   <li>membuat form input nim sampai nama adik dan menambahkan tombol submit dan reset dengan mengikuti kode di section #contact</li>
   <li>mengatur style.css untuk form pendaftaran</li>
   <li>membuat file action dengan nama about_proses.php</li>
+  <li>membuat perintah saat diinput maka akan tersimpan di section about</li>
 </ol>

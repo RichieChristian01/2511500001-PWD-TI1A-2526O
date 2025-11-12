@@ -1,10 +1,10 @@
 <?php
 session_start();
-$sesnama = $_POST["txtNama"];
-$sesemail = $_POST["txtEmail"];
-$sespesan = $_POST["txtPesan"];
-$_SESSION["sesnama"] = $sesnama;
-$_SESSION["sesemail"] = $sesemail;
-$_SESSION["sespesan"] = $sespesan;
-header("location: index.php");
+
+$_SESSION["nama"] = $_POST["txtNama"];
+$_SESSION["email"] = $_POST["txtEmail"];
+$_SESSION["pesan"] = $_POST["txtPesan"];
+
+header("Location: index.php");
+exit;
 ?>

@@ -1,20 +1,51 @@
 <?php
 session_start();
 
-$sesnama = "";
-if (isset($_SESSION["sesnama"])):
-  $sesnama = $_SESSION["sesnama"];
+$sesNIM = "";
+if (isset($_SESSION["NIM"])):
+  $sesNIM = $_SESSION["NIM"];
 endif;
 
-$sesemail = "";
-if (isset($_SESSION["sesemail"])):
-  $sesemail = $_SESSION["sesemail"];
+$sesNamaLengkap = "";
+if (isset($_SESSION["NamaLengkap"])):
+  $sesNamaLengkap = $_SESSION["NamaLengkap"];
 endif;
 
-$sespesan = "";
-if (isset($_SESSION["sespesan"])):
-  $sespesan = $_SESSION["sespesan"];
+$sesTempatLahir = "";
+if (isset($_SESSION["TempatLahir"])):
+  $sesTempatLahir = $_SESSION["TempatLahir"];
 endif;
+
+$sesTanggalLahir = "";
+if (isset($_SESSION["TanggalLahir"])):
+  $sesTanggalLahir = $_SESSION["TanggalLahir"];
+endif;
+
+$sesHobi = "";
+if (isset($_SESSION["Hobi"])):
+  $sesHobi = $_SESSION["Hobi"];
+endif;
+
+$sesPasangan = "";
+if (isset($_SESSION["Pasangan"])):
+  $sesPasangan = $_SESSION["Pasangan"];
+endif;
+
+$sesNamaOrangTua = "";
+if (isset($_SESSION["NamaOrangTua"])):
+  $sesNamaOrangTua = $_SESSION["NamaOrangTua"];
+endif;
+
+$sesNamaKakak = "";
+if (isset($_SESSION["NamaKakak"])):
+  $sesNamaKakak = $_SESSION["NamaKakak"];
+endif;
+
+$sesNamaAdik = "";
+if (isset($_SESSION["NamaAdik"])):
+  $sesNamaAdik = $_SESSION["NamaAdik"];
+endif;
+
 ?>
 
 <!DOCTYPE html>
@@ -57,39 +88,39 @@ endif;
         <form action="about_proses.php" method="POST">
 
         <label for="txtNIM"><span>NIM:</span>
-          <input type="NIM" id="txtNIM" name="txtNama" placeholder="Masukkan NIM" required autocomplete="NIM">
+          <input type="text" id="txtNIM" name="txtNIM" placeholder="Masukkan NIM" required autocomplete="NIM">
         </label>
 
         <label for="txtNamaLengkap"><span>Nama Lengkap:</span>
-          <input type="Nama_Lengkap" id="txtNamaLengkap" name="txtNamaLengkap" placeholder="Masukkan Nama Lengkap" required autocomplete="Nama_Lengkap">
+          <input type="text" id="txtNamaLengkap" name="txtNamaLengkap" placeholder="Masukkan Nama Lengkap" required autocomplete="Nama_Lengkap">
         </label>
 
         <label for="txtTempatLahir"><span>Tempat Lahir:</span>
-          <input type="Tempat_Lahir" id="txtTempatLahir" name="txtTempatLahir" placeholder="Masukkan Tempat Lahir" required autocomplete="Tempat_Lahir">
+          <input type="text" id="txtTempatLahir" name="txtTempatLahir" placeholder="Masukkan Tempat Lahir" required autocomplete="Tempat_Lahir">
         </label>
 
         <label for="txtTanggalLahir"><span>Tanggal Lahir:</span>
-          <input type="Tanggal_Lahir" id="txtTanggalLahir" name="txtTanggalLahir" placeholder="Masukkan Tanggal Lahir" required autocomplete="Tanggal_Lahir">
+          <input type="date" id="txtTanggalLahir" name="txtTanggalLahir" placeholder="Masukkan Tanggal Lahir" required autocomplete="Tanggal_Lahir">
         </label>
 
         <label for="txtHobi"><span>Hobi:</span>
-          <input type="Hobi" id="txtHobi" name="txtHobi" placeholder="Masukkan Hobi" required autocomplete="Hobi">
+          <input type="text" id="txtHobi" name="txtHobi" placeholder="Masukkan Hobi" required autocomplete="Hobi">
         </label>
 
         <label for="txtPasangan"><span>Pasangan:</span>
-          <input type="Pasangan" id="txtPasangan" name="txtPasangan" placeholder="Masukkan Nama Pasangan" required autocomplete=" Pasangan">
+          <input type="text" id="txtPasangan" name="txtPasangan" placeholder="Masukkan Nama Pasangan" required autocomplete=" Pasangan">
         </label>
 
         <label for="txtNamaOrangTua"><span>Nama Orang Tua:</span>
-          <input type="textNama_Orang_Tua" id="txtNamaOrangTua" name="txtNamaOrangTua" placeholder="Masukkan Nama Orang Tua" required autocomplete="Nama_Orang_Tua">
+          <input type="text" id="txtNamaOrangTua" name="txtNamaOrangTua" placeholder="Masukkan Nama Orang Tua" required autocomplete="Nama_Orang_Tua">
         </label>
 
         <label for="txtNamaKakak"><span>Nama Kakak:</span>
-          <input type="textNama_Kakak" id="txtNamaKakak" name="txtNamaKakak" placeholder="Masukkan Nama Kakak" required autocomplete="Nama_Kakak">
+          <input type="text" id="txtNamaKakak" name="txtNamaKakak" placeholder="Masukkan Nama Kakak" required autocomplete="Nama_Kakak">
         </label>
 
         <label for="txtNamaAdik"><span>Nama Adik:</span>
-          <input type="textNama_Adik" id="txtNamaAdik" name="txtNamaAdik" placeholder="Masukkan Nama Adik" required autocomplete="Nama_Adik">
+          <input type="text" id="txtNamaAdik" name="txtNamaAdik" placeholder="Masukkan Nama Adik" required autocomplete="Nama_Adik">
         </label>
 
         <button type="submit">Kirim</button>
@@ -98,32 +129,19 @@ endif;
     </section>
 
     <section id="about">
-      <?php
-      $nim = 2511500010;
-      $NIM = '0344300002';
-      $nama = "Say'yid Abdullah";
-      $Nama = 'Al\'kautar Benyamin';
-      $tempat = "Jebus";
-      ?>
       <h2>Tentang Saya</h2>
-      <p><strong>NIM:</strong>
-        <?php
-        echo $NIM;
-        ?>
+      <p><strong>NIM:</strong> <?php echo $sesNIM; ?>
       </p>
-      <p><strong>Nama Lengkap:</strong>
-        <?php
-        echo $Nama;
-        ?> &#128526;
+      <p><strong>Nama Lengkap:</strong> <?php echo $sesNamaLengkap;?> &#128526;
       </p>
-      <p><strong>Tempat Lahir:</strong> <?php echo $tempat; ?></p>
-      <p><strong>Tanggal Lahir:</strong> 1 Januari 2000</p>
-      <p><strong>Hobi:</strong> Memasak, coding, dan bermain musik &#127926;</p>
-      <p><strong>Pasangan:</strong> Belum ada &hearts;</p>
-      <p><strong>Pekerjaan:</strong> Dosen di ISB Atma Luhur &copy; 2025</p>
-      <p><strong>Nama Orang Tua:</strong> Bapak Setiawan dan Ibu Maria</p>
-      <p><strong>Nama Kakak:</strong> Antonius Setiawan</p>
-      <p><strong>Nama Adik:</strong> <?php echo $sespesan ?></p>
+      <p><strong>Tempat Lahir:</strong> <?php echo $sesTempatLahir; ?></p>
+      <p><strong>Tanggal Lahir:</strong> <?php echo $sesTanggalLahir;?></p>
+      <p><strong>Hobi:</strong> <?php echo $sesHobi; ?> </p>
+      <p><strong>Pasangan:</strong> <?php echo $sesPasangan; ?> </p>
+      <p><strong>Nama Orang Tua:</strong> <?php echo $sesNamaOrangTua;?> </p>
+      <p><strong>Nama Kakak:</strong> <?php echo $sesNamaKakak; ?> </p>
+      <p><strong>Nama Adik:</strong> <?php echo $sesNamaAdik; ?> </p>
+      
     </section>
 
     <section id="contact">
@@ -168,4 +186,4 @@ endif;
   <script src="script.js"></script>
 </body>
 
-</html>
+</html> 
