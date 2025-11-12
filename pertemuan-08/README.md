@@ -8,5 +8,6 @@ Kelompok: TI1A<br>
 <br>
 Proses saya mengerjakan UTS ini sebagai berikut:<br>
 <ol>
-  <li>Menambahkan section id="Pendaftaran"</li>
+  <li>Menambahkan section #pendaftaran</li>
+  <li>membuat form input nim sampai nama adik dan menambahkan tombol submit dan reset dengan mengikuti kode di section #contact</li>
 </ol>

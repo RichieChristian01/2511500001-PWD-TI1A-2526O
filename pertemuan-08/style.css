@@ -50,6 +50,7 @@ header li a:active {
 }
 
 #home:target~header nav a[href="#home"],
+#Pendaftaran:target~header nav a[href="#Pendaftaran"],
 #about:target~header nav a[href="#about"],
 #contact:target~header nav a[href="#contact"] {
   background: #fff;
@@ -60,7 +61,7 @@ header li a:active {
 }
 
 #home,
-#Pendaftaran,
+#pendaftaran,
 #about,
 #contact {
   background-color: #ffffff;
@@ -72,7 +73,7 @@ header li a:active {
 }
 
 #home h2,
-#Pendaftaran h2,
+#pendaftaran h2,
 #about h2,
 #contact h2 {
   color: #003366;
@@ -96,8 +97,19 @@ header li a:active {
   border-bottom: 1px solid #e6e6e6;
 }
 
+#about p,
+#pendaftaran label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  margin: 0;
+  padding: 6px 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
 #about strong,
-#contact label>span {
+#contact label>span,
+#pendaftaran label>span {
   min-width: 180px;
   color: #003366;
   font-weight: 600;
@@ -107,7 +119,9 @@ header li a:active {
 }
 
 #contact input,
-#contact textarea {
+#pendaftaran input,
+#contact textarea,
+#pendaftaran textarea {
   flex: 1;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -118,7 +132,8 @@ header li a:active {
   box-sizing: border-box;
 }
 
-#contact button {
+#contact button,
+#pendaftaran button {
   margin-top: 10px;
   display: inline-block;
   padding: 10px 24px;
@@ -130,25 +145,31 @@ header li a:active {
   margin-right: 8px;
 }
 
-#contact button[type="submit"] {
+#contact button[type="submit"],
+#pendaftaran button[type="submit"] {
   background-color: #003366;
   color: #fff;
   font-weight: 600;
 }
 
-#contact button[type="reset"] {
+#contact button[type="reset"],
+#pendaftaran button[type="reset"] {
   background-color: #b4b4b4;
   color: #272727;
   font-weight: 500;
 }
 
-#contact button[type="submit"]:hover {
+
+
+#contact button[type="submit"]:hover,
+#pendaftaran button[type="submit"]:hover{
   background-color: #0379ee;
   transform: translateY(-1px);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-#contact button[type="reset"]:hover {
+#contact button[type="reset"]:hover,
+#pendaftaran button[type="reset"]:hover {
   background-color: #cccccc;
   transform: translateY(-1px);
 }
