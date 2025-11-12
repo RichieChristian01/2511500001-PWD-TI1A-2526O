@@ -54,7 +54,7 @@ endif;
 
     <section id="pendaftaran">
       <h2>Pendaftaran Profil Pengunjung</h2>
-        <form action="" method="GET">
+        <form action="about_proses.php" method="POST">
 
         <label for="txtNIM"><span>NIM:</span>
           <input type="NIM" id="txtNIM" name="txtNama" placeholder="Masukkan NIM" required autocomplete="NIM">
