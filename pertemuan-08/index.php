@@ -2,48 +2,48 @@
 session_start();
 
 $sesNIM = "";
-if (isset($_SESSION["NIM"])):
-  $sesNIM = $_SESSION["NIM"];
+if (isset($_SESSION["sesNIM"])):
+  $sesNIM = $_SESSION["sesNIM"];
 endif;
 
 $sesNamaLengkap = "";
-if (isset($_SESSION["NamaLengkap"])):
-  $sesNamaLengkap = $_SESSION["NamaLengkap"];
+if (isset($_SESSION["sesNamaLengkap"])):
+  $sesNamaLengkap = $_SESSION["sesNamaLengkap"];
 endif;
 
 $sesTempatLahir = "";
-if (isset($_SESSION["TempatLahir"])):
-  $sesTempatLahir = $_SESSION["TempatLahir"];
+if (isset($_SESSION["sesTempatLahir"])):
+  $sesTempatLahir = $_SESSION["sesTempatLahir"];
 endif;
 
 $sesTanggalLahir = "";
-if (isset($_SESSION["TanggalLahir"])):
-  $sesTanggalLahir = $_SESSION["TanggalLahir"];
+if (isset($_SESSION["sesTanggalLahir"])):
+  $sesTanggalLahir = $_SESSION["sesTanggalLahir"];
 endif;
 
 $sesHobi = "";
-if (isset($_SESSION["Hobi"])):
-  $sesHobi = $_SESSION["Hobi"];
+if (isset($_SESSION["sesHobi"])):
+  $sesHobi = $_SESSION["sesHobi"];
 endif;
 
 $sesPasangan = "";
-if (isset($_SESSION["Pasangan"])):
-  $sesPasangan = $_SESSION["Pasangan"];
+if (isset($_SESSION["sesPasangan"])):
+  $sesPasangan = $_SESSION["sesPasangan"];
 endif;
 
 $sesNamaOrangTua = "";
-if (isset($_SESSION["NamaOrangTua"])):
-  $sesNamaOrangTua = $_SESSION["NamaOrangTua"];
+if (isset($_SESSION["sesNamaOrangTua"])):
+  $sesNamaOrangTua = $_SESSION["sesNamaOrangTua"];
 endif;
 
 $sesNamaKakak = "";
-if (isset($_SESSION["NamaKakak"])):
-  $sesNamaKakak = $_SESSION["NamaKakak"];
+if (isset($_SESSION["sesNamaKakak"])):
+  $sesNamaKakak = $_SESSION["sesNamaKakak"];
 endif;
 
 $sesNamaAdik = "";
-if (isset($_SESSION["NamaAdik"])):
-  $sesNamaAdik = $_SESSION["NamaAdik"];
+if (isset($_SESSION["sesNamaAdik"])):
+  $sesNamaAdik = $_SESSION["sesNamaAdik"];
 endif;
 
 ?>
@@ -108,7 +108,7 @@ endif;
         </label>
 
         <label for="txtPasangan"><span>Pasangan:</span>
-          <input type="text" id="txtPasangan" name="txtPasangan" placeholder="Masukkan Nama Pasangan" required autocomplete=" Pasangan">
+          <input type="text" id="txtPasangan" name="txtPasangan" placeholder="Masukkan Nama Pasangan" required autocomplete="Pasangan">
         </label>
 
         <label for="txtNamaOrangTua"><span>Nama Orang Tua:</span>
@@ -132,8 +132,7 @@ endif;
       <h2>Tentang Saya</h2>
       <p><strong>NIM:</strong> <?php echo $sesNIM; ?>
       </p>
-      <p><strong>Nama Lengkap:</strong> <?php echo $sesNamaLengkap;?> &#128526;
-      </p>
+      <p><strong>Nama Lengkap:</strong> <?php  $sesNamaLengkap;?> </p>
       <p><strong>Tempat Lahir:</strong> <?php echo $sesTempatLahir; ?></p>
       <p><strong>Tanggal Lahir:</strong> <?php echo $sesTanggalLahir;?></p>
       <p><strong>Hobi:</strong> <?php echo $sesHobi; ?> </p>
