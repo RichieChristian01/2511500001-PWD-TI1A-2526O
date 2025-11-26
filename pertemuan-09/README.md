@@ -17,6 +17,6 @@ Hari ini, Rabu 25 November 2025 saya mempelajari:
 dan 4 digit tahun</li>
 <li>kode pada fungsi.php untuk merender hasil atau output biodata</li>
 <li>hapus kode baris 123-128 pada index.php dan ganti dengan kode dibahan ajar</li>
-<li></li>
-<li></li>
+<li>tambahkan kode require_once pada file index.php</li>
+<li>membuat kode yag sama pada section contact</li>
 </ol>
