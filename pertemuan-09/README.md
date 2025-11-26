@@ -8,4 +8,6 @@ Hari ini, Rabu 25 November 2025 saya mempelajari:
 <li>Modif baris 10-19</li>
 <li>Menghapus dan memodifikasi kode pada baris 23-32</li>
 <li>Hapus kode baris 19-67 dan modifikasi kodenya</li>
+<li>menambahkan kode baru pada baris <h2>Tentang saya</h2> untuk menampilkan array menggunakan looping
+foreach</li>
 </ol>

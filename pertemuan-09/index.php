@@ -16,7 +16,7 @@ if (isset($_SESSION["sespesan"])):
   $sespesan = $_SESSION["sespesan"];
 endif;
 
-$fieldConfig = {
+$fieldConfig = [
   "nim" => ["label" => "NIM:", "sufffix" => ""],
   "nama" => ["label" => "Nama Lengkap:", "sufffix" => "&#128526;"],
   "tempat" => ["label" => "Tempat Lahir:", "sufffix" => ""],
@@ -27,7 +27,7 @@ $fieldConfig = {
   "ortu" => ["label" => "Nama Orang Tua:", "sufffix" => ""],
   "kakak" => ["label" => "Nama Kakak:", "sufffix" => ""],
   "adik" => ["label" => "Nama Adik:", "sufffix" => ""],
-};
+];
 ?>
 
 <!DOCTYPE html>
@@ -117,6 +117,14 @@ $fieldConfig = {
 
     <section id="about">
       <h2>Tentang Saya</h2>
+      <?php foreach ($fieldConfig as $kunci => %metadata):?>
+      <p>
+        <strong><?= $metadata["label"] ?></strong>
+        <?= htmlspecialchars(string:$biodata[$kunci] ?? "") ?>
+        <?= $metadata["suffix"] ?>
+      </p>
+      <?php endforeach; ?>
+
       <p><strong>NIM:</strong> <?= $txtNim ?></p>
       <p><strong>Nama Lengkap:</strong> <?= $txtNmLengkap ?> &#128526;</p>
       <p><strong>Tempat Lahir:</strong> <?= $txtT4Lhr ?></p>
