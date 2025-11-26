@@ -16,7 +16,7 @@ Hari ini, Rabu 25 November 2025 saya mempelajari:
 <li>menambahkan kode untuk menghasilkan tanggal dalam format 2 digit tanggal, 3 digit nama bulan,
 dan 4 digit tahun</li>
 <li>kode pada fungsi.php untuk merender hasil atau output biodata</li>
-<li></li>
+<li>hapus kode baris 123-128 pada index.php dan ganti dengan kode dibahan ajar</li>
 <li></li>
 <li></li>
 </ol>
