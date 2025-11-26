@@ -15,5 +15,8 @@ Hari ini, Rabu 25 November 2025 saya mempelajari:
 <li>tambahkan kode di bahan ajar pada file fungsi.php</li>
 <li>menambahkan kode untuk menghasilkan tanggal dalam format 2 digit tanggal, 3 digit nama bulan,
 dan 4 digit tahun</li>
-
+<li>kode pada fungsi.php untuk merender hasil atau output biodata</li>
+<li></li>
+<li></li>
+<li></li>
 </ol>
