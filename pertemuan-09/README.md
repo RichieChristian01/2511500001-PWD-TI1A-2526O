@@ -13,6 +13,7 @@ Hari ini, Rabu 25 November 2025 saya mempelajari:
 <li>hapus baris 130-139 untuk menampilkan isi array associative $fieldConfig</li>
 <li>membuat file baru fungsi.php</li>
 <li>tambahkan kode di bahan ajar pada file fungsi.php</li>
-<li></li>
+<li>menambahkan kode untuk menghasilkan tanggal dalam format 2 digit tanggal, 3 digit nama bulan,
+dan 4 digit tahun</li>
 
 </ol>
