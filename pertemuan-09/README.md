@@ -12,7 +12,7 @@ Hari ini, Rabu 25 November 2025 saya mempelajari:
 <li>menambahkan kode baru pada baris <h2>Tentang saya</h2> untuk menampilkan array menggunakan    looping foreach</li>
 <li>hapus baris 130-139 untuk menampilkan isi array associative $fieldConfig</li>
 <li>membuat file baru fungsi.php</li>
-<li></li>
+<li>tambahkan kode di bahan ajar pada file fungsi.php</li>
 <li></li>
 
 </ol>
