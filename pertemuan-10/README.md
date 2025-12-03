@@ -10,7 +10,7 @@ Hari ini, Rabu 25 November 2025 saya mempelajari:
 <li>menambahkan kode pada file koneksi.php</li>
 <li>login phpmyadmin dan buka database lalu isi nama database</li>
 <li>buka tab SQL lalu ketik querry pada kotak isian SQL untuk membuat tabel tbl_tamu yang digunaakan untuk emnyimpan data dari form contact</li>
-<li></li>
+<li>buat file baru read.php</li>
 <li></li>
 <li></li>
 </ol>
