@@ -14,7 +14,7 @@ Hari ini, Rabu 25 November 2025 saya mempelajari:
 <li>tambahkan kode pada file read.php</li>
 <li>pada tab insert isilah baris cnama, cemail, dan cpesan dan klik tombol GO</li>
 <li>buka tab browser untuk melihat hasil yang sudha kita input pada tab insert</li>
-<li></li>
+<li>copy file read.php dan rename menjadi read_inc.php lalu modif kodenya</li>
 <li></li>
 <li></li>
 </ol>
