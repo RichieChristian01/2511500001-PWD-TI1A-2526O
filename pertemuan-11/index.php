@@ -109,8 +109,29 @@ require_once __DIR__ . '/fungsi.php';
       <?= tampilkanBiodata($fieldConfig, $biodata) ?>
     </section>
 
+    <?php
+    $flash_sukses   = $_SESSION['flash_sukses'] ?? '';
+    $flash_error    = $_SESSION['flash_error'] ?? '';
+    $old            = $_SESSION['old'] ?? [];
+
+    unset($_SESSION['flash_sukses'], $_SESSION['flash_error'], $_SESSION['old']);
+    ?>
+
     <section id="contact">
       <h2>Kontak Kami</h2>
+
+      <?php if (!empty($flasg_sukses)): ?>
+        <div style="padding:10px; margin-bottom:10px; background:#d4dedda; color:#155724; border-radius:10px;">
+          <?= $flash_sukses; ?>
+        </div>
+        <?php endif; ?>
+
+        <?php if (!empty($flasg_error)): ?>
+        <div style="padding:10px; margin-bottom:10px; background:#d4dedda; color:#155724; border-radius:10px;">
+          <?= $flash_error; ?>
+        </div>
+        <?php endif; ?>
+
       <form action="proses.php" method="POST">
 
         <label for="txtNama"><span>Nama:</span>
