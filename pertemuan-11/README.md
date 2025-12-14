@@ -10,8 +10,8 @@ Hari ini, Rabu 10 Desember 2025 saya mempelajari:
 <li>menambahkan penangkap pesan sukses/gagal (flash message dari SESSION pada #contact</li>
 <li>menambahkan tampilan flash message</li>
 <li>menambahkan kode pada #contact untuk menampilkan nilai lama dari form jika terjadi error</li>
-<li></li>
-<li></li>
+<li>rewrite proses.php</li>
+<li>membuat validasi email tidak boleh kosong</li>
 <li></li>
 <li></li>
 <li></li>
