@@ -12,7 +12,7 @@ Hari ini, Rabu 10 Desember 2025 saya mempelajari:
 <li>menambahkan kode pada #contact untuk menampilkan nilai lama dari form jika terjadi error</li>
 <li>rewrite proses.php</li>
 <li>membuat validasi email tidak boleh kosong</li>
-<li></li>
+<li>menambahkan INSERT tbl_tamu dengan prepared statement dan simpan pesan sukses/eror ke $_SESSION dan juga redirect ke index.php#contact</li>
 <li></li>
 <li></li>
 </ol>
