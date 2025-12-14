@@ -16,6 +16,6 @@ Hari ini, Rabu 10 Desember 2025 saya mempelajari:
 <li>menambahkan tabel baru NO urut</li>
 <li>menambahkan validasi error nama kurang dari 3 dan pesan minimal 10</li>
 <li>menambahkan captcha sederhana seperti 3 + 6 = ? sebagai logika dasar</li>
-<li></li>
+<li>menambahkan field baru pada di tael tbl_tamu</li>
 <li></li>
 </ol>
