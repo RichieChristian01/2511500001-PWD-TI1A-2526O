@@ -13,6 +13,6 @@ Hari ini, Rabu 10 Desember 2025 saya mempelajari:
 <li>rewrite proses.php</li>
 <li>membuat validasi email tidak boleh kosong</li>
 <li>menambahkan INSERT tbl_tamu dengan prepared statement dan simpan pesan sukses/eror ke $_SESSION dan juga redirect ke index.php#contact</li>
-<li></li>
+<li>menambahkan tabel baru NO urut</li>
 <li></li>
 </ol>
