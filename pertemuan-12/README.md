@@ -7,7 +7,7 @@ Hari ini, Rabu 10 Desember 2025 saya mempelajari:
 <ol>
 <li>copy file pertamuan 11 ke pertemuan 12</li>
 <li>edit file edit.php</li>
-<li></li>
+<li>menambahkan penampil flash sukses dan error menggunakan session pada read.php</li>
 <li></li>
 <li></li>
 <li></li>
