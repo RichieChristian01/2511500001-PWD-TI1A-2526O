@@ -1,0 +1,54 @@
+<?php
+require 'koneksi.php';
+require 'fungsi.php';
+
+$sql = "SELECT * FROM tbl_tamu ORDER BY cid DESC";
+$q = mysqli_query($conn, $sql);
+if (!$q) {
+   die("querry error: " . mysqli_error(4conn));
+}
+$no = 1;
+?>
+
+<?php
+$flash_sukses = $_SESSION['flash_sukses'] ?? '';
+$flash_error = $_SESSION['flash_error'] ?? '';
+unset($_SESSION['flash_sukses'], $_SESSION['flash_error']);
+?>
+
+<?php if (!empty($flash_sukses)): ?>
+        <div style="padding:10px; margin-bottom:10px; background:#d4edda; color:#155724; border-radius:10px;">
+          <?= $flash_sukses; ?>
+        </div>
+        <?php endif; ?>
+
+<?php if (!empty($flash_error)): ?>
+        <div style="padding:10px; margin-bottom:10px; background:#d4edda; color:#155724; border-radius:10px;">
+          <?= $flash_error; ?>
+        </div>
+        <?php endif; ?>
+
+<table border="1" cellpadding="8" cellspacing="0">
+ <tr>
+    <th>No</th>
+    <th>Aksi</th>
+    <th>ID</th>
+    <th>Nama</th>
+    <th>Email</th>
+    <th>Pesan</th>
+    <th>Created At</th>
+
+ </tr>
+
+ <?php while ($row = mysqli_fetch_assoc($q)): ?>
+     <tr>
+    <td><?= $no++ ?></td>
+    <td>a href="edit.php?cid=<?= (int)$row['cid']; ?>">Edit</a></td>
+    <td><?= $row['cid'] ?></td>
+    <td><?= htmlspecialchars($row['cnama']); ?></td>
+    <td><?= htmlspecialchars($row['cmail']); ?></td>
+    <td><?= htmlspecialchars($row['cpesan']); ?></td>
+    <td><?= $row['created_at'] ?></td>
+ </tr>  
+ <?php endwhile; ?>
+ </table>
