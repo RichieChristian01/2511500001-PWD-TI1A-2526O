@@ -10,7 +10,7 @@ Hari ini, Rabu 10 Desember 2025 saya mempelajari:
 <li>menambahkan penampil flash sukses dan error menggunakan session pada read.php</li>
 <li>buat file baru dengan nama edit.php dan ketiklah kode sesuai kode yang ada di pdf</li>
 <li>buat file baru dengan nama proses_update.php dan ketiklah script sesuai dengan yg ada di pdf</li>
-<li></li>
+<li>akses url read.php dan klik link edit salah satu baris dan ubahlah data nama, email dan pesan dll</li>
 <li></li>
 <li></li>
 <li></li>
