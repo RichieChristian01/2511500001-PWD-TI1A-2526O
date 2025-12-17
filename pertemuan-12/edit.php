@@ -3,16 +3,16 @@ session_start();
 require 'koneksi.php';
 require 'fungsi.php';
 
-$cid = filter_input(INPUT_GET, 'cid', FILTER_VALIDATE-INI, [
+$cid = filter_input(INPUT_GET, 'cid', FILTER_VALIDATE_INT, [
     'options' => ['min_range' => 1]
 ]);
 
 if (!$cid) {
-    $_SESSION['flash_error'] = 'Akses tidak valid';
+    $_SESSION['flash_error'] = 'Akses tidak valid.';
     redirect_ke('read.php');
 }
 
-$stmt = mysqli_prepare($conn, "SELECT cid, cnama, cemail, cpesan
+$stmt = mysqli_prepare($conn, "SELECT cid, cnama, cmail, cpesan
 FROM tbl_tamu WHERE cid = ? LIMIT 1");
 
 if (!$stmt) {
@@ -32,7 +32,7 @@ if (!$row) {
 }
 
 $nama = $row['cnama'] ?? '';
-$email = $row['cemail'] ?? '';
+$email = $row['cmail'] ?? '';
 $pesan = $row['cpesan'] ?? '';
 
 $flash_error = $_SESSION['flash_error'] ?? '';
@@ -56,7 +56,7 @@ unset($_SESSION['flash_error'], $_SESSION['old']);
   <body>
     <header>
       <h1>Ini Header</h1>
-      <button> class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation"
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
         &#9776;
     </button>
     <nav>
@@ -96,7 +96,7 @@ unset($_SESSION['flash_error'], $_SESSION['old']);
     <label for="txtPesan"><span>Pesan Anda:</span>
       <textarea id="txtPesan" name="txtPesanEd" rows="4"
       placeholder="Tulis pesan anda..."
-      required> <?= !empty($pesan) ? $pesan : '' ?></textarea>
+      required><?= !empty($pesan) ? $pesan : '' ?></textarea>
     </label>
 
     <label for="txtCaptcha"><span>Captcha 2 x 3 = ?</span>

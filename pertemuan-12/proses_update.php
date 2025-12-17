@@ -1,4 +1,12 @@
 <?php
+function redirect_ke($url)
+{
+  header("Location: " . $url);
+  exit();
+}
+?>
+
+<?php
 session_start();
 require __DIR__ . '/koneksi.php';
 require_once __DIR__ . '/fungsi.php';
@@ -42,7 +50,7 @@ if (!empty($errors)) {
     redirect_ke('edit.php?cid=' . (int)$cid);
 }
 
-$stmt = mysqli_prepare($conn, "UPDATE tbl_tamu SET cnama=?, cemail=?, cpesan=? WHERE cid=?");
+$stmt = mysqli_prepare($conn, "UPDATE tbl_tamu SET cnama=?, cmail=?, cpesan=? WHERE cid=?");
 if (!$stmt) {
     $_SESSION['flash_error'] = 'Terjadi kesalahan sistem (prepare gagal).';
     redirect_ke('edit.php?cid=' . (int)$cid);
