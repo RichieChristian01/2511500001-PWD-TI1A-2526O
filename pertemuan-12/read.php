@@ -5,7 +5,7 @@ require 'fungsi.php';
 $sql = "SELECT * FROM tbl_tamu ORDER BY cid DESC";
 $q = mysqli_query($conn, $sql);
 if (!$q) {
-   die("querry error: " . mysqli_error(4conn));
+   die("querry error: " . mysqli_error($conn));
 }
 $no = 1;
 ?>
@@ -43,7 +43,7 @@ unset($_SESSION['flash_sukses'], $_SESSION['flash_error']);
  <?php while ($row = mysqli_fetch_assoc($q)): ?>
      <tr>
     <td><?= $no++ ?></td>
-    <td>a href="edit.php?cid=<?= (int)$row['cid']; ?>">Edit</a></td>
+    <td><a href="edit.php?cid=<?= (int)$row['cid']; ?>">Edit</a></td>
     <td><?= $row['cid'] ?></td>
     <td><?= htmlspecialchars($row['cnama']); ?></td>
     <td><?= htmlspecialchars($row['cmail']); ?></td>
