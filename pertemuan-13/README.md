@@ -7,7 +7,7 @@ Hari ini, Rabu 24 Desember 2025, materi terakhir untuk PWD saya mempelajari:
 <ol>
 <li>import sql bahan lat pertemuan 13</li>
 <li>menambahkan link delete pada read.php dan buat file baru dengan nama proses_delete.php</li>
-<li></li>
+<li>mengcopy kode proses_update.php ke proses_delete.php</li>
 <li></li>
 <li></li>
 </ol>
