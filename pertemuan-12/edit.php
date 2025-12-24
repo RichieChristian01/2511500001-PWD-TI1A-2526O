@@ -1,4 +1,12 @@
 <?php
+function redirect_ke($url)
+{
+  header("Location: " . $url);
+  exit();
+}
+?>
+
+<?php
 session_start();
 require 'koneksi.php';
 require 'fungsi.php';
