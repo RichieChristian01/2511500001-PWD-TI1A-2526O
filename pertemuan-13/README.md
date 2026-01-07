@@ -1,6 +1,6 @@
 # pertemuan-10
 
-IM : 2511500001<br>
+NIM : 2511500001<br>
 Nama : Richie Christian<br>
 
 Hari ini, Rabu 24 Desember 2025, materi terakhir untuk PWD saya mempelajari:
