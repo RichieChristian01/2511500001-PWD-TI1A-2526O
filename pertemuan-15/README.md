@@ -9,7 +9,7 @@ Hari ini, Rabu 7 Januari 2026, saya mengerjakan TRYOUT persiapan UAS:
 <li>membuat tabel baru yg digunakan untuk menampung record biodata tbl_biomhsss pada database db_pwd2025</li>
 <li>copy file read.php dan rename menjadi biomhsss_read.php</li>
 <li>meneysuaikan dan mengupdate file biomhsss_read.php</li>
-<li></li>
+<li>copy file read_inc.php dan rename menjadi biomhsss_inc.php</li>
 <li></li>
 <li></li>
 <li></li>
