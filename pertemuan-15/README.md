@@ -15,9 +15,9 @@ Hari ini, Rabu 7 Januari 2026, saya mengerjakan TRYOUT persiapan UAS:
 <li>menambahkan isset old pada label section biodata index.php</li>
 <li>copy 3 file proses dan rename dengan nama biomhsss</li>
 <li>update dan menyesuaikan file biomhsss_proses.php </li>
-<li>update dan menyesuaikan file biomhsss_update dan delete.php</li>
+<li>update dan menyesuaikan file biomhsss_update.php</li>
 <li>copy file edit.php dan rename menjadi biomhsss_edit.php</li>
 <li>update dan menyesuaikan file biomhsss_edit.php</li>
-<li></li>
+<li>update dan menyesuaikan file biomhsss_delete.php</li>
 <li></li>
 <li></li>
