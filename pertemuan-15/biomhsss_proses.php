@@ -108,7 +108,7 @@ if (!$stmt) {
     redirect_ke("index.php#biodata");
 }
 
-mysqli_stmt_bind_param($stmt, "ssssssssss", $nim, $NmLengkap, $tempatlhr, $tanggallhr, $hobi, $pasangan, $pekerjaan, $ortu, $kakak, $adik);
+mysqli_stmt_bind_param($stmt, "ssssssssss", $NIM, $Nama_Lengkap, $Tempat_Lahir, $Tgl_Lahir, $Hobi, $Pasangan, $Pekerjaan, $Nama_Ortu, $Nama_Kakak, $Nama_Adik);
 
 if (mysqli_stmt_execute($stmt)) {
     unset($_SESSION["outdated"]);
