@@ -10,7 +10,7 @@ Hari ini, Rabu 7 Januari 2026, saya mengerjakan TRYOUT persiapan UAS:
 <li>copy file read.php dan rename menjadi biomhsss_read.php</li>
 <li>meneysuaikan dan mengupdate file biomhsss_read.php</li>
 <li>copy file read_inc.php dan rename menjadi biomhsss_inc.php</li>
-<li></li>
+<li>update dan menyesuaikan file biomhsss_inc.php</li>
 <li></li>
 <li></li>
 <li></li>
