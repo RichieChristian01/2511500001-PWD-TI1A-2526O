@@ -3,7 +3,7 @@ session_start();
 require 'koneksi.php';
 require 'fungsi.php';
 
-$sql = "SELECT * FROM tbl_biomhsss ORDER BY bid DESC";
+$sql = "SELECT * FROM tbl_biomhsss ORDER BY bId DESC";
 $q = mysqli_query($conn, $sql);
 ?>
 
@@ -28,9 +28,9 @@ unset($_SESSION['flash_berhasil'], $_SESSION['flash_gagal']);
 
 <table border="1" cellpadding="8" cellspacing="0">
     <tr>
-        <th>No</th>
+        <th>NO</th>
         <th>Action</th>
-        <th>Id</th>
+        <th>ID</th>
         <th>NIM</th>
         <th>Nama Lengkap</th>
         <th>Tanggal Lahir</th>
@@ -49,11 +49,11 @@ unset($_SESSION['flash_berhasil'], $_SESSION['flash_gagal']);
     while ($row = mysqli_fetch_assoc($q)): ?>
         <tr>
             <td><?= $no++; ?></td>
-            <td><a href="edit_biodata.php?bid=<?= (int)$row['bid']; ?>">Edit</a>
-                <a onclick="return confirm('Apakah Anda Benar Ingin Menghapus <?= htmlspecialchars($row['bnmlengkap']); ?>?')" href="bioproses_delete.php?bid=<?= (int)$row['bid']; ?>">Delete</a>
+            <td><a href="biomhsss_edit.php?bId\=<?= (int)$row['bId']; ?>">Edit</a>
+                <a onclick="return confirm('Apakah Anda Benar Ingin Menghapus <?= htmlspecialchars($row['bnmlengkap']); ?>?')" href="bioproses_delete.php?bId=<?= (int)$row['bId']; ?>">Delete</a>
             </td>
-            <td><?= $row['bid']; ?></td>
-            <td><?= htmlspecialchars($row['BNIM']); ?></td>
+            <td><?= $row['bId']; ?></td>
+            <td><?= htmlspecialchars($row['bNIIM']); ?></td>
             <td><?= htmlspecialchars($row['bNama_Lengkap']); ?></td>
             <td><?= htmlspecialchars($row['bTempat_Lahir']); ?></td>
             <td><?= htmlspecialchars($row['bTgl_Lahir']); ?></td>

@@ -63,7 +63,8 @@ header li a:active {
 #home,
 #about,
 #contact,
-#biodata {
+#biodata,
+#read {
   background-color: #ffffff;
   border-radius: 10px;
   padding: 20px;
@@ -75,7 +76,8 @@ header li a:active {
 #home h2,
 #about h2,
 #contact h2,
-#biodata h2 {
+#biodata h2,
+#read h2 {
   color: #003366;
   border-bottom: 2px solid #003366;
   padding-bottom: 6px;
@@ -88,9 +90,9 @@ header li a:active {
 }
 
 #about p,
-#contact p,
 #contact label,
-#biodata label {
+#biodata label,
+#read p {
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
@@ -100,7 +102,7 @@ header li a:active {
 }
 
 #about strong,
-#contact strong,
+#read strong,
 #contact label>span,
 #biodata label>span {
   min-width: 180px;
@@ -229,7 +231,6 @@ footer {
   }
 
   #about p,
-  #contact p,
   #contact label,
   #biodata label {
     flex-direction: column;
@@ -237,7 +238,6 @@ footer {
   }
 
   #about strong,
-  #contact strong,
   #contact label>span,
   #biodata label>span {
     text-align: left;

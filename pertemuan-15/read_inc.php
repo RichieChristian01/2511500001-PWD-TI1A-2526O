@@ -1,26 +1,32 @@
+
+
 <?php
 require 'koneksi.php';
+require_once 'fungsi.php';
 
-$fieldContact = [
-  "nama" => ["label" => "Nama:", "suffix" => ""],
-  "email" => ["label" => "Email:", "suffix" => ""],
-  "pesan" => ["label" => "Pesan Anda:", "suffix" => ""]
+$configField = [
+    "name" => ["label" => "Nama:", "suffix" => ""],
+    "email" => ["label" => "Email:", "suffix" => ""],
+    "pesan" => ["label" => "Pesan Anda:", "suffix" => ""]
 ];
 
 $sql = "SELECT * FROM tbl_tamu ORDER BY cid DESC";
 $q = mysqli_query($conn, $sql);
+
 if (!$q) {
-  echo "<p>Gagal membaca data tamu: " . htmlspecialchars(mysqli_error($conn)) . "</p>";
+    echo "<p>Gagal membaca data tamu: " . htmlspecialchars(mysqli_error($conn)) . "</p>";
 } elseif (mysqli_num_rows($q) === 0) {
-  echo "<p>Belum ada data tamu yang tersimpan.</p>";
+    echo "<p>Belum ada data tamu yang tersimpan.</p>";
 } else {
-  while ($row = mysqli_fetch_assoc($q)) {
-    $arrContact = [
-      "nama"  => $row["cnama"]  ?? "",
-      "email" => $row["cemail"] ?? "",
-      "pesan" => $row["cpesan"] ?? "",
+    while ($row = mysqli_fetch_assoc($q)) {
+    $arrcontactus = [
+        "name" => $row["cnama"] ?? "",
+        "email" => $row["cemail"] ?? "",
+        "pesan" => $row["cpesan"] ?? "",
+        "no" => $row["NO"] ?? "",
     ];
-    echo tampilkanBiodata($fieldContact, $arrContact);
-  }
+    echo tampilkanContactus($configField, $arrcontactus);
+}
 }
 ?>
+

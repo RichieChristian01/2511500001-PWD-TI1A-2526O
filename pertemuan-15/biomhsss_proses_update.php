@@ -7,23 +7,35 @@
 
 <?php
 session_start();
-if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    $_SESSION["flash_gagal"] = "Akses tidak valid.";
-    redirect_ke("index.php#biodata");
+require __DIR__ . './koneksi.php';
+require_once __DIR__ . '/fungsi.php';
+
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    $_SESSION['flash_gagal'] = 'Akses tidak valid.';
+    redirect_ke('biomhsss_read.php');
 }
-require_once 'fungsi.php';
+
+$bId = filter_input(INPUT_POST, 'bId', FILTER_VALIDATE_INT, [
+    'options' => ['min_range' => 1]
+]);
+
+if (!$bId) {
+    $_SESSION['flash_gagal'] = 'bId Tidak Valid.';
+    redirect_ke('biomhsss_edit.php?bId=' . (int)$bId);
+}
+
 $NIM = bersih($_POST["txtNIM"]) ?? "";
-$Nama_Lengkap = bersih($_POST["txtNama_Lengkap"]) ?? "";
-$Tempat_Lahir = bersih($_POST["txtTempat_Lahir"]) ?? "";
-$Tgl_Lahir = bersih($_POST["txtTgl_Lahir"]) ?? "";
-$Hobi = bersih($_POST["txtHobi"]) ?? "";
-$Pasangan = bersih($_POST["txtPasangan"]) ?? "";
-$Pekerjaan = bersih($_POST["txtPekerjaan"]) ?? "";
-$Nama_Ortu = bersih($_POST["txtNama_Ortu"]) ?? "";
-$Nama_Kakak = bersih($_POST["txtNama_Kakak"]) ?? "";
-$Nama_Adik = bersih($_POST["txtNama_Adik"]) ?? "";
-
-
+$NmLengkap = bersih($_POST["txtNama_Lengkap"]) ?? "";
+$tempatlhr = bersih($_POST["txtTempat_Lahir"]) ?? "";
+$tanggallhr = bersih($_POST["txtTgl_Lahir"]) ?? "";
+$hobi = bersih($_POST["txtHobi"]) ?? "";
+$pasangan = bersih($_POST["txtPasangan"]) ?? "";
+$pekerjaan = bersih($_POST["txtPekerjaan"]) ?? "";
+$ortu = bersih($_POST["txtNamamOrtu"]) ?? "";
+$kakak = bersih($_POST["txtNmKakak"]) ?? "";
+$adik = bersih($_POST["txtNmAdik"]) ?? "";
+$captcha = bersih($_POST["txtcaptcha"] ?? "");
+$Jawaban = $_SESSION["Jawaban"] ?? null;
 
 $error = [];
 
@@ -78,10 +90,8 @@ if ($captcha === "") {
 }
 
 
-
-require 'koneksi.php';
 if (!empty($error)) {
-    $_SESSION["outdated"] = [
+    $_SESSION['outdated'] = [
         "NIM" => $NIM,
         "Nama_Lengkap" => $Nama_Lengkap,
         "Tempat_Lahir" => $Tempat_Lahir,
@@ -92,31 +102,24 @@ if (!empty($error)) {
         "Nama_Ortu" => $Nama_Ortu,
         "Nama_Kakak" => $Nama_Kakak,
         "Nama_Adik" => $Nama_Adik
-
     ];
-
-    $_SESSION["flash_gagal"] = implode("<br>", $error);
-    redirect_ke("index.php#biodata");
+    $_SESSION['flash_gagal'] = implode('<br>', $error);
+    redirect_ke('biomhsss_edit.php?bId=' . (int)$bId);
 }
 
-$sql = "INSERT INTO `tbl_biomhssss` (bnim, bNmLengkap, btmptlhr, btgllhr, bhobi, bpasangan, bpekerjaan, bnmortu, bnmkakak, bnmadik) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-$stmt = mysqli_prepare($conn, $sql);
-
-
+$stmt = mysqli_prepare($conn, "UPDATE tbl_biomhsss
+SET bNIM = ?, bNama_Lengkap = ?, bTempat_Lahir = ?, bTgl_Lahir = ?, bHobi = ?, bPasangan =?, bPekerjaan = ?, bNama_Ortu = ?, bNama_Kakak = ?, bNama_Adik = ?
+WHERE bId = ?");
 if (!$stmt) {
-    $_SESSION["flash_gagal"] = "Terjadi kesalahan pada server (prepare gagal).";
-    redirect_ke("index.php#biodata");
+    $_SESSION['flash_gagal'] = 'Terjadi kesalahan sistem (prepare gagal).';
+    redirect_ke('biomhsss_edit.php?bId=' . (int)$bId);
 }
-
-mysqli_stmt_bind_param($stmt, "ssssssssss", $nim, $NmLengkap, $tempatlhr, $tanggallhr, $hobi, $pasangan, $pekerjaan, $ortu, $kakak, $adik);
-
+mysqli_stmt_bind_param($stmt, "ssssssssssi", $NIM, $Nama_Lengkap, $Tempat_Lahir, $Tanggal_Lahir, $Hobi, $Pasangan, $Pekerjaan, $Nama_Ortu, $Nama_Kakak, $Nama_Adik, $bId);
 if (mysqli_stmt_execute($stmt)) {
-    unset($_SESSION["outdated"]);
-    $_SESSION["flash_berhasil"] = "Terima kasih, pesan Anda telah tersimpan.";
-    redirect_ke("index.php#biodata");
+    $_SESSION['flash_berhasil'] = 'Terima kasih, data Anda sudah diperbaharui.';
+    redirect_ke('biomhsss_read.php');
 } else {
-    $_SESSION["outdated"] =
-        [
+    $_SESSION['outdated'] = [
         "NIM" => $NIM,
         "Nama_Lengkap" => $Nama_Lengkap,
         "Tempat_Lahir" => $Tempat_Lahir,
@@ -127,12 +130,9 @@ if (mysqli_stmt_execute($stmt)) {
         "Nama_Ortu" => $Nama_Ortu,
         "Nama_Kakak" => $Nama_Kakak,
         "Nama_Adik" => $Nama_Adik
-        ];
-    $_SESSION["flash_gagal"] = "Gagal menyimpan pesan silakan coba lagi.";
-    redirect_ke("index.php#biodata");
+    ];
+    $_SESSION['flash_gagal'] = 'Data gagal diperbaharui. Silakan coba lagi.';
+    redirect_ke('biomhsss_edit.php?bId=' . (int)$bId);
 }
 mysqli_stmt_close($stmt);
-
-
-
-?>
+redirect_ke('biomhsss_edit.php?bId=' . (int)$bId);
