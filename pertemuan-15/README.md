@@ -17,7 +17,7 @@ Hari ini, Rabu 7 Januari 2026, saya mengerjakan TRYOUT persiapan UAS:
 <li>update dan menyesuaikan file biomhsss_proses.php </li>
 <li>update dan menyesuaikan file biomhsss_update dan delete.php</li>
 <li>copy file edit.php dan rename menjadi biomhsss_edit.php</li>
-<li></li>
+<li>update dan menyesuaikan file biomhsss_edit.php</li>
 <li></li>
 <li></li>
 <li></li>
