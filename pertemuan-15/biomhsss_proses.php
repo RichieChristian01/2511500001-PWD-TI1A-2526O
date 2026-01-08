@@ -71,11 +71,6 @@ if ($Nama_Adik === "") {
     $error[] = "Tidak boleh kosong mohon diisi";
 }
 
-if ($captcha === "") {
-    $error[] = "Verifikasi bot wajib diisi.";
-} elseif (!is_numeric($captcha) || (int)$captcha !== (int)$Jawaban) {
-    $error[] = "Jawaban Verifikasi bot salah.";
-}
 
 
 
@@ -85,7 +80,7 @@ if (!empty($error)) {
         "NIM" => $NIM,
         "Nama_Lengkap" => $Nama_Lengkap,
         "Tempat_Lahir" => $Tempat_Lahir,
-        "Tgl_Lahir" => $Tanggal_Lahir,
+        "Tgl_Lahir" => $Tgl_Lahir,
         "Hobi" => $Hobi,
         "Pasangan" => $Pasangan,
         "Pekerjaan" => $Pekerjaan,
@@ -99,7 +94,7 @@ if (!empty($error)) {
     redirect_ke("index.php#biodata");
 }
 
-$sql = "INSERT INTO `tbl_biomhssss` (bnim, bNmLengkap, btmptlhr, btgllhr, bhobi, bpasangan, bpekerjaan, bnmortu, bnmkakak, bnmadik) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+$sql = "INSERT INTO `tbl_biomhsss` (BNIM, bNama_Lengkap, bTempat_Lahir, bTgl_Lahir, bHobi, bPasangan, bPekerjaan, bNama_Ortu, bNama_Kakak, bNama_Adik) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 $stmt = mysqli_prepare($conn, $sql);
 
 
@@ -120,7 +115,7 @@ if (mysqli_stmt_execute($stmt)) {
         "NIM" => $NIM,
         "Nama_Lengkap" => $Nama_Lengkap,
         "Tempat_Lahir" => $Tempat_Lahir,
-        "Tgl_Lahir" => $Tanggal_Lahir,
+        "Tgl_Lahir" => $Tgl_Lahir,
         "Hobi" => $Hobi,
         "Pasangan" => $Pasangan,
         "Pekerjaan" => $Pekerjaan,

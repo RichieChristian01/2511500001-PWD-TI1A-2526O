@@ -11,6 +11,6 @@ Hari ini, Rabu 7 Januari 2026, saya mengerjakan TRYOUT persiapan UAS:
 <li>meneysuaikan dan mengupdate file biomhsss_read.php</li>
 <li>copy file read_inc.php dan rename menjadi biomhsss_inc.php</li>
 <li>update dan menyesuaikan file biomhsss_inc.php</li>
-<li></li>
+<li>menghapus $configfield di index.php dan membuat session baru pada index.php</li>
 <li></li>
 <li></li>

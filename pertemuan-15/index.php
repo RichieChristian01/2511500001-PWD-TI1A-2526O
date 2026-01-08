@@ -60,54 +60,54 @@ require_once __DIR__ . "/fungsi.php";
 
       <form action="biomhsss_proses.php" method="POST">
 
-        <label for="txtNim"><span>NIM:</span>
-          <input type="text" id="txtNim" name="txtNim" placeholder="Masukkan NIM" 
-          value="<?= isset($outdated["nim"]) ? htmlspecialchars($outdated["nim"]) : '' ?>">
+        <label for="txtNIM"><span>NIM:</span>
+          <input type="text" id="txtNIM" name="txtNIM" placeholder="Masukkan NIM" 
+          value="<?= isset($outdated["NIM"]) ? htmlspecialchars($outdated["NIM"]) : '' ?>">
         </label>
 
-        <label for="txtNmLengkap"><span>Nama Lengkap:</span>
-          <input type="text" id="txtNmLengkap" name="txtNmLengkap" placeholder="Masukkan Nama Lengkap" 
-          value="<?= isset($outdated["NmLengkap"]) ? htmlspecialchars($outdated["NmLengkap"]) : '' ?>">
+        <label for="txtNama_Lengkap"><span>Nama Lengkap:</span>
+          <input type="text" id="txtNama_Lengkap" name="txtNama_Lengkap" placeholder="Masukkan Nama Lengkap" 
+          value="<?= isset($outdated["Nama_Lengkap"]) ? htmlspecialchars($outdated["Nama_Lengkap"]) : '' ?>">
         </label>
 
-        <label for="txtTempatLhr"><span>Tempat Lahir:</span>
-          <input type="text" id="txtTempatLhr" name="txtTempatLhr" placeholder="Masukkan Tempat Lahir" 
-          value="<?= isset($outdated["tempatlhr"]) ? htmlspecialchars($outdated["tempatlhr"]) : '' ?>">
+        <label for="txtTempat_Lahir"><span>Tempat Lahir:</span>
+          <input type="text" id="txtTempat_Lahir" name="txtTempat_Lahir" placeholder="Masukkan Tempat Lahir" 
+          value="<?= isset($outdated["Tempat_Lahir"]) ? htmlspecialchars($outdated["Tempat_Lahir"]) : '' ?>">
         </label>
 
-        <label for="txtTglLhr"><span>Tanggal Lahir:</span>
-          <input type="text" id="txtTglLhr" name="txtTglLhr" placeholder="Masukkan Tanggal Lahir" 
-          value="<?= isset($outdated["tanggallhr"]) ? htmlspecialchars($outdated["tanggallhr"]) : '' ?>">
+        <label for="txtTgl_Lahir"><span>Tanggal Lahir:</span>
+          <input type="text" id="txtTgl_Lahir" name="txtTgl_Lahir" placeholder="Masukkan Tanggal Lahir" 
+          value="<?= isset($outdated["Tgl_Lahir"]) ? htmlspecialchars($outdated["Tgl_Lahir"]) : '' ?>">
         </label>
 
         <label for="txtHobi"><span>Hobi:</span>
           <input type="text" id="txtHobi" name="txtHobi" placeholder="Masukkan Hobi" 
-          value="<?= isset($outdated["hobi"]) ? htmlspecialchars($outdated["hobi"]) : '' ?>">
+          value="<?= isset($outdated["Hobi"]) ? htmlspecialchars($outdated["Hobi"]) : '' ?>">
         </label>
 
         <label for="txtPasangan"><span>Pasangan:</span>
           <input type="text" id="txtPasangan" name="txtPasangan" placeholder="Masukkan Pasangan" 
-          value="<?= isset($outdated["pasangan"]) ? htmlspecialchars($outdated["pasangan"]) : '' ?>">
+          value="<?= isset($outdated["Pasangan"]) ? htmlspecialchars($outdated["Pasangan"]) : '' ?>">
         </label>
 
-        <label for="txtKerja"><span>Pekerjaan:</span>
-          <input type="text" id="txtKerja" name="txtKerja" placeholder="Masukkan Pekerjaan" 
-          value="<?= isset($outdated["pekerjaan"]) ? htmlspecialchars($outdated["pekerjaan"]) : '' ?>">
+        <label for="txtPekerjaan"><span>Pekerjaan:</span>
+          <input type="text" id="txtPekerjaan" name="txtPekerjaan" placeholder="Masukkan Pekerjaan" 
+          value="<?= isset($outdated["Pekerjaan"]) ? htmlspecialchars($outdated["Pekerjaan"]) : '' ?>">
         </label>
 
-        <label for="txtNmOrtu"><span>Nama Orang Tua:</span>
-          <input type="text" id="txtNmOrtu" name="txtNmOrtu" placeholder="Masukkan Nama Orang Tua" 
-          value="<?= isset($outdated["ortu"]) ? htmlspecialchars($outdated["ortu"]) : '' ?>">
+        <label for="txtNama_Ortu"><span>Nama Orang Tua:</span>
+          <input type="text" id="txtNama_Ortu" name="txtNama_Ortu" placeholder="Masukkan Nama Orang Tua" 
+          value="<?= isset($outdated["Nama_Ortu"]) ? htmlspecialchars($outdated["Nama_Ortu"]) : '' ?>">
         </label>
 
-        <label for="txtNmKakak"><span>Nama Kakak:</span>
-          <input type="text" id="txtNmKakak" name="txtNmKakak" placeholder="Masukkan Nama Kakak" 
-          value="<?= isset($outdated["kakak"]) ? htmlspecialchars($outdated["kakak"]) : '' ?>">
+        <label for="txtNama_Kakak"><span>Nama Kakak:</span>
+          <input type="text" id="txtNama_Kakak" name="txtNama_Kakak" placeholder="Masukkan Nama Kakak" 
+          value="<?= isset($outdated["Nama_kakak"]) ? htmlspecialchars($outdated["Nama_Kakak"]) : '' ?>">
         </label>
 
-        <label for="txtNmAdik"><span>Nama Adik:</span>
-          <input type="text" id="txtNmAdik" name="txtNmAdik" placeholder="Masukkan Nama Adik" 
-          value="<?= isset($outdated["adik"]) ? htmlspecialchars($outdated["adik"]) : '' ?>">
+        <label for="txtNama_Adik"><span>Nama Adik:</span>
+          <input type="text" id="txtNama_Adik" name="txtNama_Adik" placeholder="Masukkan Nama Adik" 
+          value="<?= isset($outdated["Nama_Adik"]) ? htmlspecialchars($outdated["Nama_Adik"]) : '' ?>">
         </label>
 
         <button type="submit">Kirim</button>

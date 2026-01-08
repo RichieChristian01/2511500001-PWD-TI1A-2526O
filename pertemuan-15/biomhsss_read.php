@@ -29,7 +29,7 @@ unset($_SESSION['flash_berhasil'], $_SESSION['flash_gagal']);
 <table border="1" cellpadding="8" cellspacing="0">
     <tr>
         <th>NO</th>
-        <th>Action</th>
+        <th>Aksi</th>
         <th>ID</th>
         <th>NIM</th>
         <th>Nama Lengkap</th>
@@ -49,11 +49,11 @@ unset($_SESSION['flash_berhasil'], $_SESSION['flash_gagal']);
     while ($row = mysqli_fetch_assoc($q)): ?>
         <tr>
             <td><?= $no++; ?></td>
-            <td><a href="biomhsss_edit.php?bId\=<?= (int)$row['bId']; ?>">Edit</a>
-                <a onclick="return confirm('Apakah Anda Benar Ingin Menghapus <?= htmlspecialchars($row['bnmlengkap']); ?>?')" href="bioproses_delete.php?bId=<?= (int)$row['bId']; ?>">Delete</a>
+            <td><a href="biomhsss_edit.php?bId=<?= (int)$row['bId']; ?>">Edit</a>
+                <a onclick="return confirm('Apakah Anda Benar Ingin Menghapus <?= htmlspecialchars($row['bNama_engkap']); ?>?')" href="biomhsss_proses_delete.php?bId=<?= (int)$row['bId']; ?>">Delete</a>
             </td>
             <td><?= $row['bId']; ?></td>
-            <td><?= htmlspecialchars($row['bNIIM']); ?></td>
+            <td><?= htmlspecialchars($row['BNIM']); ?></td>
             <td><?= htmlspecialchars($row['bNama_Lengkap']); ?></td>
             <td><?= htmlspecialchars($row['bTempat_Lahir']); ?></td>
             <td><?= htmlspecialchars($row['bTgl_Lahir']); ?></td>
@@ -63,7 +63,7 @@ unset($_SESSION['flash_berhasil'], $_SESSION['flash_gagal']);
             <td><?= htmlspecialchars($row['bNama_Ortu']); ?></td>
             <td><?= htmlspecialchars($row['bNama_Kakak']); ?></td>
             <td><?= htmlspecialchars($row['bNama_Adik']); ?></td>
-            <td><?= htmlspecialchars($row['dcreated_at']); ?></td>
+            <td><?= htmlspecialchars($row['bcreated_at']); ?></td>
         </tr>
 
     <?php endwhile; ?>
