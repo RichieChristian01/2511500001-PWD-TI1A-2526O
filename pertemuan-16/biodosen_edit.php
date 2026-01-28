@@ -32,7 +32,7 @@ if (!$stmt) {
     redirect_ke('biodosen_read.php');
   }
 
-    $kddosen = $row['bkdosen'] ?? "";
+    $kdosen = $row['bkdosen'] ?? "";
     $Nmdosen = $row["bNmdosen"] ?? "";
     $Almt = $row["bAlmyt"] ?? "";
     $Tgl = $row["bTgl"] ?? "";
@@ -47,16 +47,16 @@ if (!$stmt) {
     unset($_SESSION['flash_gagal'], $_SESSION['outdated']);
 
 if (!empty($outdated)) {
-  $kddosen = $outdated['kddosen'] ?? $NIM;
-  $Nmdosen = $outdated['Nmdosen'] ?? $Nama_Lengkap;
-  $Almt = $outdated['Almt'] ?? $Tempat_Lahir;
-  $Tgl = $outdated['Tgl'] ?? $Tgl_Lahir;
-  $JJA = $outdated['JJA'] ?? $Hobi;
-  $Prodi = $outdated['Prodi'] ?? $Pasangan;
-  $NOHP = $outdated['NOHP'] ?? $Pekerjaan;
-  $Pasangan = $outdated['Pasangan'] ?? $Nama_Ortu;
-  $Anak = $outdated['Anak'] ?? $Nama_Kakak;
-  $IlmuDosen = $outdated['IlmuDosen'] ?? $Nama_Adik;
+  $kdosen = $outdated['kddosen'] ?? $kodsen;
+  $Nmdosen = $outdated['Nmdosen'] ?? $Nmdosen;
+  $Almt = $outdated['Almt'] ?? $Almt;
+  $Tgl = $outdated['Tgl'] ?? $Tgl;
+  $JJA = $outdated['JJA'] ?? $JJA;
+  $Prodi = $outdated['Prodi'] ?? $Prodi;
+  $NOHP = $outdated['NOHP'] ?? $NOHP;
+  $Pasangan = $outdated['Pasangan'] ?? $Pasangan;
+  $Anak = $outdated['Anak'] ?? $Anak;
+  $IlmuDosen = $outdated['IlmuDosen'] ?? $IlmuDosen;
 }
 
 ?>
@@ -95,58 +95,58 @@ if (!empty($outdated)) {
       <form action="biodosen_proses_update.php" method="POST">
         <input type="text" name="bId" value="<?= (int)$bId ?>">
 
-        <label for="txtNIM"><span>NIM:</span>
-          <input type="text" id="txtNIM" name="txtNIM" placeholder="Masukkan NIM"
-            value="<?= !empty($NIM) ? $NIM : '' ?>">
+        <label for="txtkdosen"><span>Kode Dosen</span>
+          <input type="text" id="txtkdosen" name="txtkdosen" placeholder="Masukkan Kode DOsen"
+            value="<?= !empty($kdosen) ? $kdosen : '' ?>">
         </label>
 
-        <label for="txtNama_Lengkap"><span>Nama Lengkap:</span>
-          <input type="text" id="txtNama_Lengkap" name="txtNama_Lengkap" placeholder="Masukkan Nama Lengkap"
-            value="<?= !empty($Nama_Lengkap) ? $Nama_Lengkap : '' ?>">
+        <label for="txtNmdosen"><span>Nama Dosen:</span>
+          <input type="text" id="txtNmdosen" name="txtNmdosen" placeholder="Masukkan Nama Dosen"
+            value="<?= !empty($Nmdosen) ? $Nmdosen : '' ?>">
         </label>
 
-        <label for="txtTempat_Lahir"><span>Tempat Lahir:</span>
-          <input type="text" id="txtTempat_Lahir" name="txtTempat_Lahir" placeholder="Masukkan Tempat Lahir"
-            value="<?= !empty($Tempat_Lahir) ? $Tempat_Lahir : '' ?>">
+        <label for="txtAlmt"><span>Alamat:</span>
+          <input type="text" id="txtAlmt" name="txtAlmt" placeholder="Masukkan Alamat"
+            value="<?= !empty($Almt) ? $Almt : '' ?>">
         </label>
 
-        <label for="txtTgl_Lahir"><span>Tanggal Lahir:</span>
-          <input type="text" id="txtTgl_Lahir" name="txtTgl_Lahir" placeholder="Masukkan Tanggal Lahir"
-            value="<?= !empty($Tgl_Lahir) ? $Tgl_Lahir : '' ?>">
+        <label for="txtTgl"><span>Tanggal Jadi Dosen:</span>
+          <input type="text" id="txtTgl" name="txtTgl_Lahir" placeholder="Masukkan Jadi Dosen"
+            value="<?= !empty($Tgl) ? $Tgl : '' ?>">
         </label>
 
-        <label for="txtHobi"><span>Hobi:</span>
-          <input type="text" id="txtHobi" name="txtHobi" placeholder="Masukkan Hobi"
-            value="<?= !empty($Hobi) ? $Hobi : '' ?>">
+        <label for="txtJJA"><span>JJA Dosen:</span>
+          <input type="text" id="txtJJA" name="txtJJA" placeholder="Masukkan JJA Dosen"
+            value="<?= !empty($JJA) ? $JJA : '' ?>">
+        </label>
+
+        <label for="txtProdi"><span>Homebase Prodi:</span>
+          <input type="text" id="txtProdi" name="txtProdi" placeholder="Masukkan Homebase Prodi"
+            value="<?= !empty($Prodi) ? $Prodi : '' ?>">
+        </label>
+
+        <label for="txtNOHP"><span>Nomor HP:</span>
+          <input type="text" id="txtNOHP" name="txtNama_Ortu" placeholder="Masukkan Nomor HP"
+            value="<?= !empty($NOHP) ? $NOHP : '' ?>">
         </label>
 
         <label for="txtPasangan"><span>Pasangan:</span>
-          <input type="text" id="txtPasangan" name="txtPasangan" placeholder="Masukkan Pasangan"
+          <input type="text" id="txtPasangan" name="txtPasangan" placeholder="Masukkan Nama Pasangan"
             value="<?= !empty($Pasangan) ? $Pasangan : '' ?>">
         </label>
 
-        <label for="txtPekerjaan"><span>Pekerjaan:</span>
-          <input type="text" id="txtPekerjaan" name="txtPekerjaan" placeholder="Masukkan Pekerjaan"
-            value="<?= !empty($Pekerjaan) ? $Pekerjaan : '' ?>">
+        <label for="txtAnak"><span>Nama Anak:</span>
+          <input type="text" id="txtAnak" name="txtAnak" placeholder="Masukkan Nama Anak"
+            value="<?= !empty($Anak) ? $Anak : '' ?>">
         </label>
 
-        <label for="txtNama_Ortu"><span>Nama Orang Tua:</span>
-          <input type="text" id="txtNama_Ortu" name="txtNama_Ortu" placeholder="Masukkan Nama Orang Tua"
-            value="<?= !empty($Nama_Ortu) ? $Nama_Ortu : '' ?>">
-        </label>
-
-        <label for="txtNama_Kakak"><span>Nama Kakak:</span>
-          <input type="text" id="txtNama_Kakak" name="txtNama_Kakak" placeholder="Masukkan Nama Kakak"
-            value="<?= !empty($Nama_Kakak) ? $Nama_Kakak : '' ?>">
-        </label>
-
-        <label for="txtNama_Adik"><span>Nama Adik:</span>
-          <input type="text" id="txtNama_Adik" name="txtNama_Adik" placeholder="Masukkan Nama Adik"
-            value="<?= !empty($Nama_Adik) ? $Nama_Adik : '' ?>">
+        <label for="txtIlmuDosen"><span>Nama Adik:</span>
+          <input type="text" id="txtIlmuDosen" name="txtIlmuDosen" placeholder="Masukkan Bidang Ilmu Dosen"
+            value="<?= !empty($IlmuDosen) ? $IlmuDosen : '' ?>">
         </label>
           <button type="submit">Kirim</button>
           <button type="reset">Batal</button>
-          <a href="read.php" class="reset">Kembali</a>
+          <a href="biodosen_read.php" class="reset">Kembali</a>
         </form>
       </section>
     </main>
