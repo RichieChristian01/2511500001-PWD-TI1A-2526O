@@ -11,7 +11,7 @@ Hari ini, Rabu 28 Januari 2026 saya mengikuti UAS PWD
 <li>menyesuaikan dan mengupdate file biodosen_read.php</li>
 <li>copy file read_inc.php lalu rename menjadi biodosen_inc.php</li>
 <li>menyesuaikan dan mengupdate isi file biodosen_inc.php</li>
-<li></li>
+<li>menghapus $configfield di index.php dan membuat session baru pada index.php</li>
 <li></li>
 <li></li>
 <li></li>
