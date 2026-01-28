@@ -15,7 +15,7 @@ Hari ini, Rabu 28 Januari 2026 saya mengikuti UAS PWD
 <li>menyesuaikan isi file index.php</li>
 <li>buat 3 file dgn nama biodosen</li>
 <li>menyesuaikan isi file proses.php</li>
-<li></li>
+<li>menyesuaikan isi file biodosen_update.php</li>
 <li></li>
 <li></li>
 </ol>
